@@ -1,0 +1,21 @@
+CREATE TABLE Employees (
+    EmployeeID INTEGER PRIMARY KEY,
+    Name TEXT,
+    Department TEXT,
+    Salary REAL,
+    Email TEXT
+);
+
+INSERT INTO Employees (EmployeeID, Name, Department, Salary, Email) VALUES
+(1, 'Alice', 'HR', 55000, 'alice@example.com'),
+(2, 'Bob', 'Finance', 60000, NULL),
+(3, 'Charlie', 'IT', NULL, 'charlie@example.com');
+
+UPDATE Employees
+SET Salary = 62000
+WHERE EmployeeID = 3 AND Salary IS NULL;
+
+DELETE FROM Employees
+WHERE Email IS NULL;
+
+SELECT * FROM Employees;
